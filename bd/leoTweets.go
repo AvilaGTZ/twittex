@@ -2,6 +2,7 @@ package bd
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"time"
 
@@ -31,6 +32,7 @@ func LeoTweets(ID string, pagina int64) ([]*models.DevuelvoTweets, bool) {
 	cursor, err := col.Find(ctx, condicion, opciones)
 	if err != nil {
 		log.Fatal(err.Error())
+		fmt.Println("Chingaste a tu madre")
 		return resultado, false
 	}
 
